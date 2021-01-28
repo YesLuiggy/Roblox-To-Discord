@@ -12,7 +12,7 @@ With Roblox-Discord you can easily send messages and embeds from Roblox to Disco
 - [x] Embed: Thumbnail
 - [x] Embed: Url
 - [x] Embed: Footer
-- [x] Embed: Field
+- [x] Embed: Fields
 
 **Methods**
 
