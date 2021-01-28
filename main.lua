@@ -1,7 +1,7 @@
 local HTTPService = game:GetService("HttpService")
 
 local module = {
-	APIVersion = "1 Early Release", 
+	mVersion = "1 Early Release", 
 	Embed = {Title = "", Description = "", Color = 0}
 }
 
