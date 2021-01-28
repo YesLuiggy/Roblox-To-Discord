@@ -9,13 +9,13 @@ You can easily send messages and embeds from Roblox to Discord.
 
 **Methods**
 
- :Send(Url, Content)
+ :Send(Url, Content) <br>
 If the content is a table, and has embed properties(i.e. Title, Description), it'll send an embed, else a commom message.
 
 **Properties**
 
- mVersion
+ mVersion <br>
 Returns the module version.
 
- Embed
+ Embed <br>
 Returns the template for creating an embed.
