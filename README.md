@@ -4,8 +4,19 @@ You can easily send messages and embeds from Roblox to Discord.
 
 **To-do**
 
-- [x] Embeds (Title, Description, Color)
-- [ ] Embed fields
+- [ ] Full embed compatiable? 
+- [x] Embed: Title
+- [x] Embed: Description
+- [x] Embed: Color
+- [ ] Embed: Image
+- [ ] Embed: Thumbnail
+- [ ] Embed: Url
+- [ ] Embed: Timestamp
+- [ ] Embed: Footer
+- [ ] Embed: Video
+- [ ] Embed: Provider
+- [ ] Embed: Author
+- [ ] Embed: Field
 
 **Methods**
 
