@@ -1,2 +1,3 @@
 # Roblox-Discord
-Cool API, my first one.
+
+You can easily create embeds and send them with the function :Send()
