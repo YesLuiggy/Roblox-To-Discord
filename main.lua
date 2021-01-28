@@ -2,7 +2,7 @@ local HTTPService = game:GetService("HttpService")
 
 local module = {
 	mVersion = "1 stable", 
-	Embed = {Title = "", Description = "", Color = 0, Image = "", Thumbnail = "", Url = "", Footer = ""}
+	Embed = {Title = "", Description = "", Color = 0, Image = "", Thumbnail = "", Url = "", Footer = {}}
 }
 
 function module:Send(Url, Content)
@@ -38,7 +38,11 @@ function module:Send(Url, Content)
 		end
 		
 		if Content.Footer then
-			PayLoad.embeds[1].footer = {text = tostring(Content.Footer)}
+			if Content.Footer.icon_url then
+				PayLoad.embeds[1].footer = {text = Content.Footer.text, icon_url = Content.Footer.icon_url}
+			else
+				PayLoad.embeds[1].footer = {text = Content.Footer.text}
+			end
 		end
 		
 		if Content.Url then
