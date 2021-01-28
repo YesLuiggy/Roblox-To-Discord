@@ -1,2 +1,2 @@
-# Roblox-Discord-Api
+# Roblox-To-Discord
 Cool API, my first one.
