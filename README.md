@@ -18,4 +18,4 @@ If the content is a table, and has embed properties(i.e. Title, Description), it
 Returns the module version.
 
  *Embed* <br>
-Returns the template for creating an embed.
+Returns the embed template.
