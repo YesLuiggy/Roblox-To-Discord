@@ -1,10 +1,10 @@
 # Roblox-Discord
 
-You can easily send messages and embeds from Roblox to Discord.
+With Roblox-Discord you can easily send messages and embeds from Roblox to Discord.
 
 **To-do**
 
-- [ ] Full embed compatiable? 
+- [ ] Full embed compatible? 
 - [x] Embed: Title
 - [x] Embed: Description
 - [x] Embed: Color
