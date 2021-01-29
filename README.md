@@ -4,7 +4,7 @@ With Roblox-Discord you can easily send messages and embeds from Roblox to Disco
 
 Get it here: https://www.roblox.com/library/6313358704/Webhook-Wrapper
 
-**To-do**
+**Supported:**
 
 - [x] Full embed compatible? 
 - [x] Embed: Title
