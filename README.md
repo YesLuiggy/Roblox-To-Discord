@@ -4,10 +4,11 @@ With Roblox-Discord you can easily send messages and embeds from Roblox to Disco
 
 **To-do**
 
-- [x] Full embed compatible? 
+- [ ] Full embed compatible? 
 - [x] Embed: Title
 - [x] Embed: Description
 - [x] Embed: Color
+- [x] Embed: Timestamp
 - [x] Embed: Author
 - [x] Embed: Image
 - [x] Embed: Thumbnail
