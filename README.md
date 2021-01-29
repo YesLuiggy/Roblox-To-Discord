@@ -8,6 +8,7 @@ With Roblox-Discord you can easily send messages and embeds from Roblox to Disco
 - [x] Embed: Title
 - [x] Embed: Description
 - [x] Embed: Color
+- [x] Embed: Footer
 - [x] Embed: Image
 - [x] Embed: Thumbnail
 - [x] Embed: Url
