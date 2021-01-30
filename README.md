@@ -2,7 +2,7 @@
 
 With Rohttp you can easily use the Roblox Http service and send Discord Rich Embeds.
 
-Get it here: https://www.roblox.com/library/6313358704/Webhook-Wrapper
+Get it here: https://www.roblox.com/library/6313358704/Rohttp
 
 **Embed Support:**
 
