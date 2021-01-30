@@ -3,16 +3,16 @@ local HTTPService = game:GetService("HttpService")
 local module = {
 	mVersion = "v1.0 Stable", 
 	Embed = {
-		Title = "", 
-		Description = "",
-		Url = "", 
-		Timestamp = true,
-		Color = 0, 
-		Footer = {},	-- text = "", icon_url = "", proxy_icon_url = "" 
-		Image = {}, 	-- url = "", proxy_url = "", height = 0, width = 0 
-		Thumbnail = {},	-- url = "", proxy_url = "", height = 0, width = 0 
-		Author = {}, 	-- name = "", url = "", icon_url = "", proxy_icon_url = ""
-		Fields = {},	-- name = "", value = "", inline = false
+		Title = nil,	  -- string
+		Description = nil,-- string
+		Url = nil, 		  -- string
+		Timestamp = nil,  -- bool
+		Color = nil,      -- number
+		Footer = nil,	  -- {text = "", icon_url = "", proxy_icon_url = ""}
+		Image = nil, 	  -- {url = "", proxy_url = "", height = 0, width = 0}
+		Thumbnail = nil,  -- {url = "", proxy_url = "", height = 0, width = 0}
+		Author = nil, 	  -- {name = "", url = "", icon_url = "", proxy_icon_url = ""}
+		Fields = nil,	  -- {name = "", value = "", inline = false}
 	}
 }
 
@@ -32,46 +32,48 @@ function module:Send(Url, Content)
 			}}
 		}
 
-		if Content.Title then
+		if Content.Title ~= nil then
 			PayLoad.embeds[1].title = Content.Title
 		end
 
-		if Content.Description then
+		if Content.Description ~= nil then
 			PayLoad.embeds[1].description = Content.Description
 		end
-		
-		if Content.Url then
+
+		if Content.Url ~= nil then
 			PayLoad.embeds[1].url = Content.Url
 		end
-		
-		if Content.Timestamp then
-			local OsDate = os.date("!*t")
-			local Date = OsDate.year .. "-" .. OsDate.month .. "-" .. OsDate.day .. "T" .. OsDate.hour .. ":" .. OsDate.min .. ":" .. OsDate.sec .. "Z"
 
-			PayLoad.embeds[1].timestamp = tostring(Date)
+		if Content.Timestamp ~= nil then
+			if Content.Timestamp == true then
+				local OsDate = os.date("*t")
+				local Date = OsDate.year .. "-" .. OsDate.month .. "-" .. OsDate.day .. "T" .. OsDate.hour .. ":" .. OsDate.min .. ":" .. OsDate.sec .. "Z"
+				
+				PayLoad.embeds[1].timestamp = tostring(Date)
+			end
 		end
-		
-		if Content.Color then
+
+		if Content.Color ~= nil then
 			PayLoad.embeds[1].color = Content.Color
 		end
-		
-		if Content.Footer then
+
+		if Content.Footer ~= nil then
 			PayLoad.embeds[1].footer = Content.Footer
 		end
-		
-		if Content.Image then
+
+		if Content.Image ~= nil then
 			PayLoad.embeds[1].image = Content.Image
 		end
 
-		if Content.Thumbnail then
+		if Content.Thumbnail ~= nil then
 			PayLoad.embeds[1].thumbnail = Content.Thumbnail
 		end
 
-		if Content.Author then
+		if Content.Author ~= nil then
 			PayLoad.embeds[1].author = Content.Author
 		end
-		
-		if Content.Fields then
+
+		if Content.Fields ~= nil then
 			PayLoad.embeds[1].fields = Content.Fields
 		end
 	end
