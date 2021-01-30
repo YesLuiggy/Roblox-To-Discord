@@ -1,8 +1,5 @@
 # Roblox-Discord
 
-## Current broken! ⚠
-Fixing today, give me 30 minutes.
-
 With Roblox-Discord you can easily send messages and embeds from Roblox to Discord.
 
 Get it here: https://www.roblox.com/library/6313358704/Webhook-Wrapper
