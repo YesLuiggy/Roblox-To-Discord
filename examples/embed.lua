@@ -12,4 +12,4 @@ Embed.Thumbnail = {url = "https://tr.rbxcdn.com/e338983714189a2e248f76170ee8f7df
 Embed.Author = {name = "redacted", url = "https://devforum.roblox.com/u/luiggy1200/summary", icon_url = "https://tr.rbxcdn.com/e338983714189a2e248f76170ee8f7df/150/150/AvatarHeadshot/Png"}
 Embed.Fields = {{name = "Cool", value = "Value goes here!", inline = true}, {name = "Hi!", value = "Cool value.", inline = true}}
 
-API:Send("DISCORD_WEBHOOK_URL", Embed)
+API:Send("DISCORD_WEBHOOK_URL", API.DiscordEmbed:Build(embed))
