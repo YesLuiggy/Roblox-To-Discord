@@ -1,5 +1,7 @@
 # Rohttp
 
+⚠ Code breaking changes, don't use it for now if you don't want to change your code every single day.
+
 With Rohttp you can easily use the Roblox Http service and send Discord Rich Embeds.
 
 Get it here: https://www.roblox.com/library/6313358704/Rohttp
