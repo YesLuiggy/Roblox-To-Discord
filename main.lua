@@ -1,82 +1,77 @@
 local HTTPService = game:GetService("HttpService")
 
 local module = {
-	mVersion = "v1.0 Stable", 
-	DiscordEmbed = {
-		Title = nil,	  -- string
-		Description = nil,-- string
-		Url = nil, 		  -- string
-		Timestamp = nil,  -- bool
-		Color = nil,      -- number
-		Footer = nil,	  -- {text = "", icon_url = "", proxy_icon_url = ""}
-		Image = nil, 	  -- {url = "", proxy_url = "", height = 0, width = 0}
-		Thumbnail = nil,  -- {url = "", proxy_url = "", height = 0, width = 0}
-		Author = nil, 	  -- {name = "", url = "", icon_url = "", proxy_icon_url = ""}
-		Fields = nil,	  -- {name = "", value = "", inline = false}
+	rohttpVersion = "Early Access",
+	Discord = {
+		Embed = {}
 	}
 }
 
 function module:Send(Url, Content)
-	if Url == nil then
-		return error("Url is nil.")
+	if Url == nil or Content == nil then
+		return error("Url or Content is nil.")
 	end
-	
+
 	HTTPService:PostAsync(Url, HTTPService:JSONEncode(Content))
 end
 
-function module.DiscordEmbed:Build(Content)
-	local Embed = {
+function module.Discord.Embed:new(Content)
+	if typeof(Content) ~= 'table' then
+		return error('The embed must be a table.')
+	end
+
+	local PayLoad = {
 		["embeds"] = {{
 
 		}}
 	}
-	
-	if Content.Title ~= nil then
-		Embed.embeds[1].title = Content.Title
+
+	if Content.title ~= nil then
+		PayLoad.embeds[1].title = Content.title
 	end
 
-	if Content.Description ~= nil then
-		Embed.embeds[1].description = Content.Description
+	if Content.description ~= nil then
+		PayLoad.embeds[1].description = Content.description
 	end
 
-	if Content.Url ~= nil then
-		Embed.embeds[1].url = Content.Url
+	if Content.url ~= nil then
+		PayLoad.embeds[1].url = Content.url
 	end
 
-	if Content.Timestamp ~= nil then
-		if Content.Timestamp == true then
+	if Content.timestamp ~= nil then
+		if Content.timestamp == true then
 			local OsDate = os.date("*t")
 			local Date = OsDate.year .. "-" .. OsDate.month .. "-" .. OsDate.day .. "T" .. OsDate.hour .. ":" .. OsDate.min .. ":" .. OsDate.sec .. "Z"
 
-			Embed.embeds[1].timestamp = tostring(Date)
+			PayLoad.embeds[1].timestamp = tostring(Date)
 		end
 	end
 
-	if Content.Color ~= nil then
-		Embed.embeds[1].color = Content.Color
+	if Content.color ~= nil then
+		PayLoad.embeds[1].color = Content.color
 	end
 
-	if Content.Footer ~= nil then
-		Embed.embeds[1].footer = Content.Footer
+	if Content.footer ~= nil then
+		PayLoad.embeds[1].footer = Content.footer
 	end
 
-	if Content.Image ~= nil then
-		Embed.embeds[1].image = Content.Image
+	if Content.image ~= nil then
+		PayLoad.embeds[1].image = Content.image
 	end
 
-	if Content.Thumbnail ~= nil then
-		Embed.embeds[1].thumbnail = Content.Thumbnail
+	if Content.thumbnail ~= nil then
+		PayLoad.embeds[1].thumbnail = Content.thumbnail
 	end
 
-	if Content.Author ~= nil then
-		Embed.embeds[1].author = Content.Author
+	if Content.author ~= nil then
+		PayLoad.embeds[1].author = Content.author
 	end
 
-	if Content.Fields ~= nil then
-		Embed.embeds[1].fields = Content.Fields
+	if Content.fields ~= nil then
+		PayLoad.embeds[1].fields = Content.fields
 	end
 
-	return Embed
+	return PayLoad	
 end
 
 return module
