@@ -1,6 +1,8 @@
-local API = require(game.ServerScriptService.HttpWrapper)
+local Api = require(game.ServerScriptService.Rohttp)
 
-API:Send(
-    "DiscordWebhookLink",
-    "message"    
+Api:Send(
+	'WEBHOOK_LINK',
+	{
+		content = 'cool'
+	}
 )
